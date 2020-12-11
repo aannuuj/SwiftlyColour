@@ -25,6 +25,8 @@ struct RGBtoColorView: View {
                             self.red.removeLast()
                         }
                     }
+                    .textFieldStyle(PlainTextFieldStyle())
+                    .background(RoundedRectangle(cornerRadius: 2).stroke(Color.white.opacity(0.7)))
 
                 TextField("55", text: $green)
                     .onReceive(Just(self.green)) { inputValue in
@@ -32,6 +34,8 @@ struct RGBtoColorView: View {
                             self.green.removeLast()
                         }
                     }
+                    .textFieldStyle(PlainTextFieldStyle())
+                    .background(RoundedRectangle(cornerRadius: 2).stroke(Color.white.opacity(0.7)))
 
                 TextField("56", text: $blue)
                     .onReceive(Just(self.blue)) { inputValue in
@@ -39,6 +43,8 @@ struct RGBtoColorView: View {
                             self.blue.removeLast()
                         }
                     }
+                    .textFieldStyle(PlainTextFieldStyle())
+                    .background(RoundedRectangle(cornerRadius: 2).stroke(Color.white.opacity(0.7)))
 
                 TextField("1.0", text: $alpha)
                     .onReceive(Just(self.alpha)) { inputValue in
@@ -46,8 +52,11 @@ struct RGBtoColorView: View {
                             self.alpha.removeLast()
                         }
                     }
+                    .textFieldStyle(PlainTextFieldStyle())
+                    .background(RoundedRectangle(cornerRadius: 2).stroke(Color.white.opacity(0.7)))
 
             }
+            .padding(.all)
             HStack(alignment: .center, spacing: 5){
                 Text("Swift :")
                 Text(output)

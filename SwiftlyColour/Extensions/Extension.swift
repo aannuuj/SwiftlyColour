@@ -77,7 +77,7 @@ func RGBToColor(r: String, g: String, b: String , a : String) -> NSColor {
     let alpha = CGFloat(Float(a) ?? 1.0 / 255.0)
     
     guard red > 1.01 || green > 1.01 || blue > 1.01  || alpha > 1.01 else {
-        return NSColor(red: 0.00, green: 0.00, blue: 0.00, alpha: 1.00)
+        return NSColor.gray
     }
     
     return NSColor(red: red,

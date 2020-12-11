@@ -12,8 +12,7 @@ struct ContentView: View {
     @State var state = false
     @State private var showPicker = false
     var body: some View {
-        // v2
-        // add picker and photoshop tools - > convert them to hex + rgb + UIColour
+     
         
         VStack {
             Button(action: { self.showPicker = true}){
@@ -42,6 +41,7 @@ struct ContentView: View {
         }
         .padding()
         .frame(minWidth: 480, maxWidth: .infinity, minHeight: 480, maxHeight: .infinity, alignment: .center)
+        .edgesIgnoringSafeArea(.all)
         
     }
 }

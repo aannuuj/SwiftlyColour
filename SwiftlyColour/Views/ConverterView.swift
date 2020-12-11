@@ -31,7 +31,9 @@ struct ConverterView: View {
                             }
                         }
                 }
-                
+                .textFieldStyle(PlainTextFieldStyle())
+                .background(RoundedRectangle(cornerRadius: 2).stroke(Color.white.opacity(0.7)))
+                .padding(.all)
                 HStack(alignment: .center, spacing: 5){
                     Text("Swift :")
                     Text(output)
@@ -44,9 +46,7 @@ struct ConverterView: View {
                 }
                 Spacer()
             }
-   
         }
-        
         .background(Color(hexToColor(hexString: text)))
     }
 }
